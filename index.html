@@ -146,14 +146,31 @@ main{padding:56px 0 80px}
 .concl-col-item{font-size:12px;color:rgba(255,255,255,.62);line-height:1.7;margin-bottom:5px;display:flex;gap:6px}
 .concl-col-item::before{content:'›';flex-shrink:0;color:rgba(255,255,255,.28)}
 .divider{height:1px;background:var(--border);margin:52px 0}
+.fabe-card{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:12px}
+.fabe-header{display:flex;align-items:center;gap:12px;padding:14px 18px}
+.fabe-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+.fabe-title{font-size:14px;font-weight:700}
+.fabe-sub{font-size:11px;margin-top:2px}
+.fabe-body{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;border-top:1px solid var(--border)}
+.fabe-col{padding:12px 14px;border-right:1px solid var(--border)}
+.fabe-col:last-child{border-right:none}
+.fabe-col-hd{font-size:10px;font-weight:700;letter-spacing:.06em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.fabe-item{display:flex;gap:5px;font-size:11px;color:var(--text2);line-height:1.6;margin-bottom:6px}
+.fabe-item:last-child{margin-bottom:0}
+.fi-dot{color:var(--text3);flex-shrink:0}
 footer{background:var(--text);color:rgba(255,255,255,.3);padding:22px 0;font-size:11px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 @media(max-width:768px){
   .g2,.g4,.kpi-target,.concl-grid,.phase-grid,.scope-grid{grid-template-columns:1fr}
   .swot,.funnel-stage{grid-template-columns:1fr}
+  .fabe-body{grid-template-columns:1fr 1fr}
+  .fabe-col:nth-child(2){border-right:none}
+  .fabe-col:nth-child(3){border-top:1px solid var(--border)}
+  .fabe-col:nth-child(4){border-right:none;border-top:1px solid var(--border)}
   .perspective-nav{grid-template-columns:1fr}
   .pnav-item{border-right:none;border-bottom:1px solid var(--border2)}
   .scope-col{padding:0 0 16px;border-right:none;border-bottom:1px solid var(--border);margin-bottom:16px}
+  .nav-links{display:none}
 }
 </style>
 </head>
@@ -164,6 +181,7 @@ footer{background:var(--text);color:rgba(255,255,255,.3);padding:22px 0;font-siz
     <span class="nav-logo">T社 リニューアル戦略レポート</span>
     <div class="nav-links">
       <a class="nav-link" href="#business">経営診断</a>
+      <a class="nav-link" href="#fabe">FABE分析</a>
       <a class="nav-link" href="#marketing">WEBマーケ</a>
       <a class="nav-link" href="#dev">WEB開発</a>
       <a class="nav-link" href="#schedule">スケジュール</a>
@@ -276,6 +294,102 @@ footer{background:var(--text);color:rgba(255,255,255,.3);padding:22px 0;font-siz
       <div class="sw-i"><span class="sd">›</span>AI生成コンテンツの台頭による記事品質差別化困難化</div>
     </div>
   </div>
+
+  <div style="margin-top:24px" id="fabe">
+    <div class="section-label" style="margin-bottom:6px">FABE Analysis</div>
+    <div class="section-title" style="font-size:17px;margin-bottom:6px">FABE分析 — 3つの戦略軸</div>
+    <div class="section-desc" style="margin-bottom:14px">Feature（特徴）/ Advantage（利点）/ Benefit（顧客利益）/ Evidence（根拠）の4要素で、各施策の価値を構造化します。</div>
+
+    <div class="fabe-card">
+      <div class="fabe-header" style="background:var(--blue-l);border-bottom:1px solid #a8c8f0">
+        <div class="fabe-num" style="background:var(--blue-l);color:var(--navy)">①</div>
+        <div><div class="fabe-title" style="color:var(--navy)">サイト構造・ユーザビリティ革新</div><div class="fabe-sub" style="color:var(--blue)">「探しやすさ」を極め、滞在時間と回遊率を最大化する</div></div>
+      </div>
+      <div class="fabe-body">
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--navy)">Feature — 特徴</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>TOPを2〜4カラム構造へ変更し情報密度を向上</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>日本地図で都道府県検索・詳細カテゴリヘッダー導入</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>記事サムネへの自動タグ付番</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>カテゴリ表示順バグ修正・ページ送り改善</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--navy)">Advantage — 利点</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>関心地域・ジャンルへのクリック数を削減し離脱を防止</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>手動タグ付け工数を削減しつつ検索精度を向上</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>表示順バグ解消でユーザーの信頼感を回復</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--navy)">Benefit — 顧客利益</div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>読者：</strong>移住・仕事探しに直結する情報をストレスなく発見し満足度向上</span></div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>運営：</strong>PV・CTR向上 → 媒体価値と広告単価が向上し収益基盤を強化</span></div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--navy)">Evidence — 根拠</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>TOPページへの課題指摘が最多（26件中9件・34%）</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>複数担当者が同一課題を独立して指摘 → 組織的な優先事項として確認済み</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>表示順バグは具体的に報告済みで即時修正可能</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabe-card">
+      <div class="fabe-header" style="background:var(--amber-l);border-bottom:1px solid #f0d690">
+        <div class="fabe-num" style="background:var(--amber-l);color:var(--amber)">②</div>
+        <div><div class="fabe-title" style="color:var(--amber)">収益機会（マネタイズ）の拡張</div><div class="fabe-sub" style="color:#c87a20">「枠を売る」モデルから成果につながる「プラットフォーム」へ進化させる</div></div>
+      </div>
+      <div class="fabe-body">
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--amber)">Feature — 特徴</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>TOP・都道府県一覧にバナー広告枠・ピックアップ枠を新設</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>「地域のしごと」の求人サイト化（業種・年収・フリーワード検索）</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>物件広告枠の新設（空き家等への誘致）</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>T社商店との連携（EC機能または商品ページリンク）</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--amber)">Advantage — 利点</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>地域限定・職種ターゲットの高単価タイアップメニューを提案可能</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>求人・物件検索という「機能」自体を商品化できる</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>ECとの連携でPV数と購買動線を同時強化</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--amber)">Benefit — 顧客利益</div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>広告主：</strong>採用・移住相談・物件問い合わせなど具体的な成果を獲得しやすくなる</span></div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>運営：</strong>収益源の多角化により広告1社依存リスクを低減できる</span></div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>読者：</strong>求人・物件情報も一元的に探せるようになり利便性向上</span></div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--amber)">Evidence — 根拠</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>収益化提案が7件と2番目に多くチームの収益意識の高さが裏付け</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>「枠自体の販売可能」と明記 → 営業的に即座に具体化できる</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>T社WORKとの連動は既存ブランド資産を活用した拡張で追加投資を最小化</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabe-card">
+      <div class="fabe-header" style="background:var(--teal-l);border-bottom:1px solid #9FE1CB">
+        <div class="fabe-num" style="background:var(--teal-l);color:var(--teal)">③</div>
+        <div><div class="fabe-title" style="color:var(--teal)">リード獲得・ファン・コミュニティの形成</div><div class="fabe-sub" style="color:#1a9e70">「読み捨て」させない継続的な関係性を築く仕組みを導入する</div></div>
+      </div>
+      <div class="fabe-body">
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--teal)">Feature — 特徴</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>事例紹介資料ダウンロードのディレクトリ化（一括管理・公開）</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>LINE登録誘導機能を強化し直接接点を確立</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>SNS・YouTube最新投稿をサイトに自動表示</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>プロモ相談ページに媒体画像を追加しビジュアル強化</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--teal)">Advantage — 利点</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>閲覧のみで終わっていたユーザーを「資料請求者・LINE登録者」として可視化</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>SNSフォロワー増により情報拡散力を維持・強化できる</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>相談ページのビジュアル強化で相談件数の増加が見込める</div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--teal)">Benefit — 顧客利益</div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>運営：</strong>LINEリストでイベント告知・求人情報をプッシュ通知し集客を安定化</span></div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>パートナー：</strong>コミュニティへの直接アプローチが広告オプションとして価値化</span></div>
+          <div class="fabe-item"><span class="fi-dot">›</span><span><strong>読者：</strong>LINE経由でイベント・求人情報をタイムリーに受け取れる</span></div>
+        </div>
+        <div class="fabe-col"><div class="fabe-col-hd" style="color:var(--teal)">Evidence — 根拠</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>プロモ相談強化は複数担当者が独立して提起 → 現状の相談導線への問題意識が共有されている</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>「資料DLは事例セクションを切り出すだけでもGood」と記載あり → 低コストで即着手可能</div>
+          <div class="fabe-item"><span class="fi-dot">›</span>SNS連携は2件の提案があり、両者ともにヘッダー配置と自動表示を具体的に言及</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <div class="divider"></div>
